@@ -11,8 +11,11 @@ Model : Généralement dans un package comme com.example.exercice.model (contien
 
 Q2 : À quoi sert la propriété canLoginProperty() dans le ViewModel ?
 
+La propriété canLoginProperty() est généralement une propriété booléenne qui indique si le bouton de connexion doit être activé ou non. 
+Elle est liée aux champs username et password : elle retourne true uniquement si les deux champs sont remplis (ou respectent certains critères de validation), permettant ainsi d'activer ou de désactiver le bouton de connexion dans la vue.
 
 Q3 : Où est-elle utilisée dans la LoginView.fxml ou LoginView.java ?
+
 
 
 Q4 : Quel est le rôle de FilteredList<Todo> dans le ViewModel ?
@@ -30,6 +33,10 @@ Dans la Vue, elle est généralement reliée à une case à cocher (checkbox) ou
 
 Q6 : Quelle est la différence entre bind(...) et bindBidirectional(...) ?
 
+bind(...) :
+La méthode bind crée une liaison unidirectionnelle. Cela signifie que la propriété cible est mise à jour automatiquement lorsque la propriété source change, mais pas l'inverse.
+bindBidirectional(...) : 
+La méthode bindBidirectional crée une liaison bidirectionnelle. Cela signifie que les deux propriétés sont synchronisées : si l'une change, l'autre est automatiquement mise à jour, et vice versa.
 
 Q7 : Pourquoi utilise-t-on bindBidirectional ici ?
 
