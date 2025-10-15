@@ -1,8 +1,13 @@
 Q0 : Quels sont les deux écrans disponibles dans l’application ?
 
+Login : Écran de connexion où l'utilisateur entre son identifiant et son mot de passe.
+Todo : Écran de la liste des tâches, accessible après une connexion réussie.
 
 Q1 : Quels packages contiennent respectivement les View, ViewModel et Model ?
 
+View : Généralement dans un package comme com.example.exercice.view (contient les fichiers .fxml et les contrôleurs de vue comme LoginView.java et TodoView.java).
+ViewModel : Généralement dans un package comme com.example.exercice.viewmodel (contient les classes comme LoginViewModel.java et TodoViewModel.java).
+Model : Généralement dans un package comme com.example.exercice.model (contient les classes métiers comme Todo.java et les services comme AuthService.java).
 
 Q2 : À quoi sert la propriété canLoginProperty() dans le ViewModel ?
 
@@ -11,10 +16,17 @@ Q3 : Où est-elle utilisée dans la LoginView.fxml ou LoginView.java ?
 
 
 Q4 : Quel est le rôle de FilteredList<Todo> dans le ViewModel ?
-Dans le TodoViewModel, la classe FilteredList<Todo> est utilisée pour filtrer dynamiquement la liste des tâches (source). Elle permet d'afficher uniquement les tâches qui correspondent à un certain critère, défini par la méthode match(Todo t). Par exemple, elle peut filtrer les tâches pour n'afficher que celles qui ne sont pas terminées (!t.isDone()), sauf si la propriété showDone est activée. Cela permet de mettre à jour automatiquement l'affichage en fonction des préférences de l'utilisateur.
+
+Dans le TodoViewModel, la classe FilteredList<Todo> est utilisée pour filtrer dynamiquement la liste des tâches (source).
+Elle permet d'afficher uniquement les tâches qui correspondent à un certain critère, défini par la méthode match(Todo t). 
+Par exemple, elle peut filtrer les tâches pour n'afficher que celles qui ne sont pas terminées (!t.isDone()), sauf si la propriété showDone est activée. 
+Cela permet de mettre à jour automatiquement l'affichage en fonction des préférences de l'utilisateur.
 
 Q5 : Que fait la propriété showDone et à quel élément de la Vue est-elle reliée ?
-La propriété showDone est un BooleanProperty qui détermine si les tâches marquées comme terminées doivent être affichées ou non. Lorsqu'elle est modifiée, elle déclenche une réévaluation du prédicat de filtrage via la méthode recomputePredicate(). Dans la Vue, elle est généralement reliée à une case à cocher (checkbox) ou un bouton qui permet à l'utilisateur de choisir s'il veut voir ou non les tâches terminées.
+
+La propriété showDone est un BooleanProperty qui détermine si les tâches marquées comme terminées doivent être affichées ou non. 
+Lorsqu'elle est modifiée, elle déclenche une réévaluation du prédicat de filtrage via la méthode recomputePredicate(). 
+Dans la Vue, elle est généralement reliée à une case à cocher (checkbox) ou un bouton qui permet à l'utilisateur de choisir s'il veut voir ou non les tâches terminées.
 
 Q6 : Quelle est la différence entre bind(...) et bindBidirectional(...) ?
 
