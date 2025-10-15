@@ -1,0 +1,19 @@
+Q0 : Quels sont les deux écrans disponibles dans l’application ?
+
+Q1 : Quels packages contiennent respectivement les View, ViewModel et Model ?
+
+Q2 : À quoi sert la propriété canLoginProperty() dans le ViewModel ?
+
+Q3 : Où est-elle utilisée dans la LoginView.fxml ou LoginView.java ?
+
+Q4 : Quel est le rôle de FilteredList<Todo> dans le ViewModel ?
+
+Q5 : Que fait la propriété showDone et à quel élément de la Vue est-elle reliée ?
+
+Q6 : Quelle est la différence entre bind(...) et bindBidirectional(...) ?
+
+Q7 : Pourquoi utilise-t-on bindBidirectional ici ?
+
+Q8 : Dans la table des Todos, pourquoi utilise-t-on CheckBoxTableCell pour la colonne Fait ?
+
+Q9 : Comment est gérée la navigation entre l’écran Login et l’écran Todo (Navigator.java) ?
