@@ -16,7 +16,8 @@ Elle est liée aux champs username et password : elle retourne true uniquement s
 
 Q3 : Où est-elle utilisée dans la LoginView.fxml ou LoginView.java ?
 
-
+La propriété canLoginProperty() est utilisée dans la class LoginView.java pour lier l'état du bouton de connexion (btnLogin).
+Dans LoginView.fxml n'est pas directement utilisée dans le fichier FXML.
 
 Q4 : Quel est le rôle de FilteredList<Todo> dans le ViewModel ?
 
@@ -40,8 +41,13 @@ La méthode bindBidirectional crée une liaison bidirectionnelle. Cela signifie 
 
 Q7 : Pourquoi utilise-t-on bindBidirectional ici ?
 
+On utilise bindBidirectional ici pour que le texte saisi dans txtNew mette à jour vm.newTitleProperty(). Si vm.newTitleProperty() change, txtNew soit aussi mis à jour.
 
 Q8 : Dans la table des Todos, pourquoi utilise-t-on CheckBoxTableCell pour la colonne Fait ?
 
+Cela permet d'afficher une case à cocher (checkbox) pour chaque tâche.
+L'utilisateur peut cocher ou décocher directement la case pour indiquer si la tâche est terminée ou non.
 
 Q9 : Comment est gérée la navigation entre l’écran Login et l’écran Todo (Navigator.java) ?
+
+Navigator permet de basculer entre les scènes en remplaçant la scène actuelle par une nouvelle scène.
