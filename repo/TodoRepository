@@ -1,0 +1,26 @@
+package com.example.exercice.repo;
+
+import com.example.exercice.model.Todo;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
+public class TodoRepository {
+    private final ObservableList<Todo> todos = FXCollections.observableArrayList();
+
+    public ObservableList<Todo> findAll() {
+        return todos;
+    }
+
+    public void add(String title) {
+        String id = String.valueOf(todos.size() + 1);
+        todos.add(new Todo(id, title, false));
+    }
+
+    public void remove(Todo todo) {
+        todos.remove(todo);
+    }
+
+    public void removeAll() {
+        todos.clear();
+    }
+}
